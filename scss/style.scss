@@ -1,0 +1,171 @@
+@import "auth";
+@mixin laptop {
+  @media (max-width: 1300px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: 1000px) {
+    @content;
+  }
+}
+.feed {
+  background-color: black;
+  color: white;
+  min-height: 100vh;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  @include tablet() {
+    grid-template-columns: 1fr 4fr;
+  }
+}
+
+.left-bar {
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  img {
+    width: 90px;
+    @include laptop() {
+      width: 50px;
+    }
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 10px;
+    @include laptop() {
+      align-items: center;
+    }
+    span {
+      @include laptop() {
+        display: none;
+      }
+    }
+    a {
+      display: flex;
+      gap: 10px;
+      text-decoration: none;
+      color: white;
+      padding: 10px;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      i {
+        @include laptop() {
+          font-size: 25px;
+        }
+      }
+
+      &:hover {
+        background-color: rgba(167, 158, 158, 0.396);
+      }
+    }
+    button {
+      background-color: $blue;
+      @include laptop() {
+        border-radius: 50%;
+      }
+      &:hover {
+        background-color: rgba(167, 158, 158, 0.396);
+      }
+    }
+  }
+
+  .user-info {
+    display: flex;
+    justify-content: space-around;
+
+    align-items: center;
+    img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+    }
+
+    button {
+      background-color: $blue;
+      color: white;
+      &:hover {
+        background-color: rgba(167, 158, 158, 0.396);
+      }
+    }
+    p {
+      @include laptop() {
+        display: none;
+      }
+    }
+  }
+}
+// main alanı
+main {
+  border: 2px solid rgb(101, 100, 100);
+
+  header {
+    border-bottom: 1px solid rgb(101, 100, 100);
+  }
+  #post-tweet {
+    display: flex;
+    gap: 20px;
+    border-bottom: 1px solid rgb(101, 100, 100);
+    padding: 10px;
+    img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+
+    .input-area {
+      width: 100%;
+
+      input {
+        width: 100%;
+        border: none;
+        background-color: black;
+        outline: none;
+        padding: 10px 20px;
+        color: white;
+      }
+
+      .buttons {
+        display: flex;
+        justify-content: end;
+        button {
+          border-radius: 5px;
+          background-color: $blue;
+          padding: 5px 10px;
+          color: white;
+          transition: all ease 0.3s;
+          &:hover {
+            background-color: rgb(101, 100, 100);
+          }
+        }
+      }
+    }
+  }
+}
+
+.news {
+  @include tablet() {
+    display: none;
+  }
+}
+
+// tweet area
+
+.tweet {
+  padding: 20px;
+  border: 2px solid red;
+  display: flex;
+  gap: 20px;
+
+  img {
+    width: 40px;
+    height: 40px;
+  }
+}

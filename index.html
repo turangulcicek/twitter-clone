@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>X | Homepage</title>
+    <link rel="stylesheet" href="scss/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+  </head>
+  <body class="feed">
+    <!-- left area(navbar) -->
+    <aside class="left-bar">
+      <nav>
+        <img
+          src="https://www.sarkarinaukriexams.com/images/import/sne13333514974.png"
+          alt=""
+        />
+        <a href="">
+          <i class="bi bi-house-fill"></i>
+          <span>Anasayfa</span>
+        </a>
+        <a href=""> <i class="bi bi-search"></i> <span>Search</span> </a>
+        <a href="">
+          <i class="bi bi-bell"></i>
+          <span>Notifications</span>
+        </a>
+        <a href="">
+          <i class="bi bi-envelope"></i>
+          <span>Messages</span>
+        </a>
+        <a href="">
+          <i class="bi bi-bookmark"></i>
+          <span>Bookmarks</span>
+        </a>
+        <button class="btn">
+          <i class="bi bi-send-fill"></i>
+          <span>Send</span>
+        </button>
+      </nav>
+
+      <div class="user-info">
+        <img id="profile-pic" />
+        <div>
+          <p id="user-name"></p>
+          <p id="user-tag"></p>
+          <button id="logout-btn" class="btn">Log out</button>
+        </div>
+      </div>
+    </aside>
+
+    <main>
+      <header><h4 class="p-3">Anasayfa</h4></header>
+      <!-- Tweet Atma alanı -->
+      <form id="post-tweet" action="">
+        <img id="profile-pic" />
+        <div class="input-area">
+          <input placeholder="Neler Oluyor" type="text" />
+          <div class="buttons">
+            <button class="">Tweetle</button>
+          </div>
+        </div>
+      </form>
+      <div class="tweet-area">
+        <!-- atılan tweet -->
+
+        <div class="tweet">
+          <img
+            src="https://rapidapi.com/cdn/images?url=https://rapidapi-prod-apis.s3.amazonaws.com/8ce26d87-c438-4af4-a11a-9844c816e71a.png"
+            alt=""
+          />
+          <div class="tweet-info">
+            <div>
+              <span>Username</span>
+              <span>Usertag</span>
+            </div>
+            <p>Tweet</p>
+          </div>
+        </div>
+        <!-- / atılan tweet -->
+      </div>
+    </main>
+
+    <aside class="news">Haberler</aside>
+
+    <script src="main.js" type="module"></script>
+  </body>
+</html>

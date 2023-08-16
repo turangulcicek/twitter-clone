@@ -1,0 +1,37 @@
+$blue: #1d9bf0;
+
+.auth-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: rgb(50, 46, 46);
+  form {
+    border: 1px solid gray;
+    background-color: #000000;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 30px 80px;
+    padding: 40px 80px;
+    align-items: center;
+    border-radius: 10px;
+    width: 500px;
+    div {
+      width: 100%;
+    }
+    img {
+      width: 100px;
+    }
+    span {
+      display: block;
+    }
+    button {
+      background-color: $blue;
+      transition: all ease 0.3s;
+      &:hover {
+        background-color: gray;
+        color: black;
+      }
+    }
+  }
+}
